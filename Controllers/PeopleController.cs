@@ -59,7 +59,7 @@ namespace pimUnipAPI.Controllers
                 return StatusCode(500, $"Erro ao obter as pessoas cadastradas: {ex.Message}");
             }
         }
-    }
+    
 
     [HttpPost]
     public IActionResult CreatePerson(Person person)
@@ -142,7 +142,7 @@ namespace pimUnipAPI.Controllers
     }
 
 
-    [HttpDelete("{id}")]
+        [HttpDelete("{id}")]
     public IActionResult DeletePerson(int id)
     {
         if (id == 0)
@@ -180,7 +180,13 @@ namespace pimUnipAPI.Controllers
     public class Person
     {
         public int Id { get; set; }
-        public string? Name { get; set; }
+        public string Name { get; set; } // Remove the question mark (?)
+        public string Nome {get; set;}
         public long Age { get; set; }
-    }
+        public int EnderecoId { get; set; } // Add the missing property
+
+        public long Cpf {get; set;}
+    }   
+
+}
 }

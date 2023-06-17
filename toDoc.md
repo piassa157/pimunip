@@ -76,3 +76,77 @@ Em seguida, ele cria uma conexão com o banco de dados MySQL usando a string de 
 
 Se a exclusão for bem-sucedida, ele retorna uma resposta de sucesso. Caso ocorra algum erro durante o processo, ele retorna uma resposta de erro com a mensagem correspondente.
 ```
+
+
+
+
+## Criação dos testes
+
+
+<h5> Testes automatizados. </h5>
+
+<p>
+
+Peço desculpas novamente pelo equívoco. Parece que o pacote `Microsoft.VisualStudio.TestTools.UnitTesting` não está disponível para o .NET 6.0.
+
+No .NET 6.0, o framework de teste recomendado é o xUnit. A seguir estão os passos para configurar e executar testes usando o xUnit:
+
+1. Certifique-se de estar no diretório raiz do seu projeto WebAPI no terminal ou prompt de comando.
+
+2. Execute o seguinte comando para adicionar uma referência ao pacote xUnit:
+
+   ```shell
+   dotnet add package Xunit
+   ```
+
+   Isso adicionará o pacote necessário para criar testes usando o xUnit.
+
+3. Crie um novo diretório para os testes, executando o seguinte comando:
+
+   ```shell
+   mkdir Testes
+   ```
+
+4. Navegue para o diretório de testes:
+
+   ```shell
+   cd Testes
+   ```
+
+5. Execute o seguinte comando para criar um novo projeto de testes usando o xUnit:
+
+   ```shell
+   dotnet new xunit
+   ```
+
+   Isso criará um projeto de testes com a estrutura necessária usando o xUnit.
+
+6. Volte ao diretório raiz do seu projeto WebAPI:
+
+   ```shell
+   cd ..
+   ```
+
+7. Adicione uma referência ao projeto principal ao projeto de testes, executando o seguinte comando:
+
+   ```shell
+   dotnet add Testes/Testes.csproj reference NomeDoProjeto.csproj
+   ```
+
+   Certifique-se de substituir "NomeDoProjeto.csproj" pelo nome do arquivo do projeto WebAPI.
+
+8. Abra o arquivo `Testes/UnitTest1.cs` (ou qualquer outro arquivo de teste gerado) em um editor de código e remova o código de exemplo gerado.
+
+9. Escreva seus próprios testes dentro desse arquivo, utilizando as classes de teste, métodos de teste e asserções apropriadas para validar o comportamento da sua WebAPI.
+
+10. No terminal ou prompt de comando, execute o seguinte comando para compilar e executar os testes:
+
+    ```shell
+    dotnet test
+    ```
+
+    Isso compilará os testes e executará todos os casos de teste definidos usando o xUnit.
+
+Esses são os passos para criar e executar testes para um projeto C# WebAPI no .NET 6.0 usando o xUnit. Lembre-se de que você pode adicionar mais testes, personalizar a configuração dos testes e explorar recursos avançados fornecidos pelo xUnit, como teorias e fatores de dados para testes parametrizados.
+
+</p>
