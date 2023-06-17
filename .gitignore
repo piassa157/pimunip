@@ -1,0 +1,42 @@
+# Arquivos de build
+bin/
+obj/
+
+# Arquivos de configuração local
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Testing.json
+
+# Arquivos de teste
+TestResults/
+TestBinaries/
+
+# Arquivos temporários
+*.tmp
+*.swp
+
+# Arquivos do Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# Arquivos do Rider
+.idea/
+*.sln.iml
+*.sln.DotSettings.user
+
+# Arquivos de registro
+*.log
+
+# Arquivos de dependências
+packages/
+*.nupkg
+
+# Arquivos gerados automaticamente
+*.csproj.user
+*.dll
+*.pdb
+*.cache
+*.bak
+*.generated.cs
